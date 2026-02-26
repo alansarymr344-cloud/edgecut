@@ -11519,6 +11519,18 @@ a.text-dark:focus {
   .detail-box p {
     font-size: 16px;
   }
+  /* testimonial layout adjustments */
+  .client_section .box {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 10px;
+  }
+  .client_section .box .img-box {
+    margin: 0 auto 20px;
+  }
+  .client_section .box .detail-box {
+    align-items: center;
+  }
 }
 
 /* make all images inside boxes fluid */
@@ -14364,8 +14376,10 @@ a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 45px;
+  margin: 45px auto;
   padding: 35px 25px;
+  max-width: 400px;
+  width: 100%;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
@@ -14376,7 +14390,16 @@ a:focus {
   margin-right: 25px;
   min-width: 175px;
   max-width: 175px;
+  width: 175px;
+  height: 175px;
   overflow: hidden;
+}
+
+/* ensure circle stays square and centered */
+.client_section .box .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .client_section .box .img-box img {
